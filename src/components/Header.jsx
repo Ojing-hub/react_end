@@ -46,7 +46,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <div className="header_nav_mob" id='headerToggle' aria-expanded={`${show ? "true" : "false"}`} role='button' tabIndex="0" onClick={toggleMenu}>
+        <div className="header_nav_mob" id='headerToggle' aria-expanded={`${show ? true : false}`} role='button' tabIndex="0" onClick={toggleMenu}>
           <span></span>
         </div>
       </div>
