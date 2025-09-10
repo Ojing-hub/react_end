@@ -1,0 +1,15 @@
+#skip{
+    a{
+        display: block;
+        position: absolute;
+        top: -100px;
+        left: 10px;
+        background-color: var(--black);
+        color: var(--white);
+        padding: 10px;
+
+        &:focus{
+            top: 10px;
+        }
+    }    
+}

@@ -1,0 +1,96 @@
+#intro{
+    height: 100vh;
+}
+.intro_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 16px;
+
+    @media(max-width:800px){
+        justify-content: center;
+    }
+
+    .intro_title{
+        font-size: 9.8vw;
+        text-transform: uppercase;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+    .intro_text{
+        width: 100%;
+        height: 40vh;
+        background-color: var(--black);
+        color: var(--white);
+        flex-direction: column;
+        position: relative;
+        @include flex-center;
+
+        .text{
+            font-size: 3vw;
+            font-weight: 800;
+            text-align: center;
+            position: absolute;
+            z-index: 10;
+            transition: all 0.3s;
+            opacity: 1;
+        }
+        &:hover .text{
+            opacity: 0;
+        }
+
+        .img{
+            width: 30vh;
+            height: 30vh;
+            overflow: hidden;
+            border-radius: 50%;
+            filter: saturate(0);
+            transition: all 0.3s;
+        }
+        &:hover .img{
+            filter: saturate(1);
+        }
+    }
+    .intro_lines{
+        width: 100%;
+
+        .line{
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--black);
+            margin-bottom: 0.5vw;
+
+            &:nth-of-type(1){height: 1px;}
+            &:nth-of-type(2){height: 2px;}
+            &:nth-of-type(3){height: 5px;}
+            &:nth-of-type(4){height: 9px;}
+            &:nth-of-type(5){height: 13px;}
+            &:nth-of-type(6){height: 17px;}
+            &:nth-of-type(7){height: 25px;}
+        }
+    }
+    .intro_lines.bottom{
+        
+        .line{
+            display: none;
+            margin-bottom: 0;
+            margin-top: 0.5vw;
+
+            &:nth-last-of-type(1){height: 1px;}
+            &:nth-last-of-type(2){height: 2px;}
+            &:nth-last-of-type(3){height: 5px;}
+            &:nth-last-of-type(4){height: 9px;}
+            &:nth-last-of-type(5){height: 13px;}
+            &:nth-last-of-type(6){height: 17px;}
+            &:nth-last-of-type(7){height: 25px;}
+
+            @media(max-width:800px){
+                display: block;
+            }
+        }
+    }
+}

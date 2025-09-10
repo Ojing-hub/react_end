@@ -1,0 +1,88 @@
+#port{
+    width: 100%;
+    margin-top: 30vh;
+    overflow: hidden;
+}
+.port_inner{
+    padding: 16px;
+
+    .port_title{
+        width: 100%;
+        height: 5vw;
+        font-size: 4vw;
+        text-transform: uppercase;
+        font-weight: 800;
+        border-bottom: 0.4vw solid var(--black);
+        margin-bottom: 16px;
+
+        em{
+            font-size: 20px;
+        }
+    }
+    .port_wrap{
+        width: 3120px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .port_item{
+            width: 500px;
+            height: 70vh;
+            padding: 20px;
+            margin-right: 20px;
+
+            &.p1{background-color: var(--subBg100);}
+            &.p2{background-color: var(--subBg200);}
+            &.p3{background-color: var(--subBg300);}
+            &.p4{background-color: var(--subBg400);}
+            &.p5{background-color: var(--subBg500);}
+            &.p6{background-color: var(--subBg100);}
+
+            .num{
+                font-size: 32px;
+                font-family: var(--mainNum-font);
+            }
+            a.img{
+                display: block;
+                margin-top: -20px;
+                transition: margin-top 0.3s;
+
+                img{
+                    filter: saturate(0);
+                    transition: filter 0.3s;
+                }
+
+                &:hover{
+                    margin-top: 0;
+
+                    img{
+                        filter: saturate(1);
+                    }
+                }
+            }
+            .title{
+                font-size: 20px;
+                font-family: var(--mainNum-font);
+                padding: 12px 0;
+                text-align: center;
+                border-bottom: 1px solid var(--black);
+                margin-bottom: 16px;
+            }
+            .desc{
+                text-align: justify;
+            }
+            a.site{
+                border: 1px solid var(--black);
+                display: block;
+                padding: 8px 0;
+                text-align: center;
+                margin-top: 20px;
+                transition: all 0.3s;
+
+                &:hover{
+                    background-color: var(--black);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
